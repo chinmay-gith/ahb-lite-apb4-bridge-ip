@@ -1,0 +1,27 @@
+read_verilog -sv rtl/ahb_slave_if.sv
+read_verilog -sv rtl/address_decoder.sv
+read_verilog -sv rtl/apb_master_if.sv
+read_verilog -sv rtl/bridge_fsm.sv
+read_verilog -sv rtl/ahb_apb_bridge_top.sv
+
+hierarchy -top ahb_apb_bridge_top
+
+proc
+opt
+
+fsm
+opt
+
+memory
+opt
+
+techmap
+opt
+
+abc
+
+clean
+
+stat
+
+write_verilog reports/synth_netlist.v

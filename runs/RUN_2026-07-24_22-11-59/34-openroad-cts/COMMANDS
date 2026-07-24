@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /home/azmuth/ASIC_PROJECTS/ahb-lite-apb4-bridge-ip/runs/RUN_2026-07-24_22-11-59/34-openroad-cts/or_metrics_out.json /nix/store/h0ldzjka94yryiq8yxbxmwargpnmwhx6-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/openroad/cts.tcl

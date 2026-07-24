@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/home/azmuth/ASIC_PROJECTS/ahb-lite-apb4-bridge-ip/runs/RUN_2026-07-24_22-07-55/tmp/5b7fb6462b5d40f390bfd2b913a34a72.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/home/azmuth/ASIC_PROJECTS/ahb-lite-apb4-bridge-ip/runs/RUN_2026-07-24_22-07-55/tmp/5b7fb6462b5d40f390bfd2b913a34a72.bb.v"

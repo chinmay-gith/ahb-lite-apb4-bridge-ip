@@ -1,0 +1,10 @@
+%Warning-UNUSEDSIGNAL: rtl/address_decoder.sv:5:35: Bits of signal are not used: 'addr_reg'[31:14,11:0]
+                                                  : ... note: In instance 'ahb_apb_bridge_top.u_decoder'
+    5 |     input  logic [ADDR_WIDTH-1:0] addr_reg,
+      |                                   ^~~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.020
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: rtl/ahb_slave_if.sv:11:35: Bits of signal are not used: 'HTRANS'[0]
+                                                : ... note: In instance 'ahb_apb_bridge_top.u_ahb_slave_if'
+   11 |     input  logic [1:0]            HTRANS,
+      |                                   ^~~~~~

@@ -1,0 +1,5 @@
+- cell: ahb_apb_bridge_top
+  inout: []
+  input:
+  - HTRANS[0]
+  output: []

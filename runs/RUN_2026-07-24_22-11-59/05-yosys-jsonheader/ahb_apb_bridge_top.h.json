@@ -1,0 +1,1699 @@
+{
+  "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+  "modules": {
+    "ahb_apb_bridge_top": {
+      "attributes": {
+        "hdlname": "ahb_apb_bridge_top",
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "rtl/ahb_apb_bridge_top.sv:1.1-102.10"
+      },
+      "parameter_default_values": {
+        "ADDR_WIDTH": "00000000000000000000000000100000",
+        "DATA_WIDTH": "00000000000000000000000000100000",
+        "NUM_SLAVES": "00000000000000000000000000000100"
+      },
+      "ports": {
+        "HCLK": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "HRESETn": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "HADDR": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ]
+        },
+        "HWDATA": {
+          "direction": "input",
+          "bits": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ]
+        },
+        "HWRITE": {
+          "direction": "input",
+          "bits": [ 68 ]
+        },
+        "HTRANS": {
+          "direction": "input",
+          "bits": [ 69, 70 ]
+        },
+        "HREADY": {
+          "direction": "input",
+          "bits": [ 71 ]
+        },
+        "HRDATA": {
+          "direction": "output",
+          "bits": [ 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103 ]
+        },
+        "HREADYOUT": {
+          "direction": "output",
+          "bits": [ 104 ]
+        },
+        "HRESP": {
+          "direction": "output",
+          "bits": [ 105 ]
+        },
+        "PADDR": {
+          "direction": "output",
+          "bits": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137 ]
+        },
+        "PWDATA": {
+          "direction": "output",
+          "bits": [ 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169 ]
+        },
+        "PWRITE": {
+          "direction": "output",
+          "bits": [ 170 ]
+        },
+        "PSEL": {
+          "direction": "output",
+          "bits": [ 171, 172, 173, 174 ]
+        },
+        "PENABLE": {
+          "direction": "output",
+          "bits": [ 175 ]
+        },
+        "PRDATA": {
+          "direction": "input",
+          "bits": [ 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103 ]
+        },
+        "PREADY": {
+          "direction": "input",
+          "bits": [ 176 ]
+        },
+        "PSLVERR": {
+          "direction": "input",
+          "bits": [ 177 ]
+        }
+      },
+      "cells": {
+        "$flatten\\u_ahb_slave_if.$logic_and$rtl/ahb_slave_if.sv:26$10": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/ahb_slave_if.sv:26.14-26.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 71 ],
+            "B": [ 70 ],
+            "Y": [ 178 ]
+          }
+        },
+        "$flatten\\u_ahb_slave_if.$logic_and$rtl/ahb_slave_if.sv:34$12": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/ahb_slave_if.sv:34.22-34.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 71 ],
+            "B": [ 70 ],
+            "Y": [ 179 ]
+          }
+        },
+        "$flatten\\u_ahb_slave_if.$procdff$83": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000000000000000000000000000000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "rtl/ahb_slave_if.sv:20.1-31.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211 ],
+            "Q": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137 ]
+          }
+        },
+        "$flatten\\u_ahb_slave_if.$procdff$88": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000000000000000000000000000000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "rtl/ahb_slave_if.sv:20.1-31.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243 ],
+            "Q": [ 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169 ]
+          }
+        },
+        "$flatten\\u_ahb_slave_if.$procdff$93": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "rtl/ahb_slave_if.sv:20.1-31.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 244 ],
+            "Q": [ 170 ]
+          }
+        },
+        "$flatten\\u_ahb_slave_if.$procmux$68": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "rtl/ahb_slave_if.sv:26.14-26.33|rtl/ahb_slave_if.sv:26.10-30.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 170 ],
+            "B": [ 68 ],
+            "S": [ 178 ],
+            "Y": [ 244 ]
+          }
+        },
+        "$flatten\\u_ahb_slave_if.$procmux$70": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "rtl/ahb_slave_if.sv:26.14-26.33|rtl/ahb_slave_if.sv:26.10-30.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169 ],
+            "B": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+            "S": [ 178 ],
+            "Y": [ 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243 ]
+          }
+        },
+        "$flatten\\u_ahb_slave_if.$procmux$72": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "rtl/ahb_slave_if.sv:26.14-26.33|rtl/ahb_slave_if.sv:26.10-30.8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137 ],
+            "B": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+            "S": [ 178 ],
+            "Y": [ 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procdff$78": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:24.1-29.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 245, 246 ],
+            "Q": [ 247, 248 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$15": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000100",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "1", 176, "0", "1" ],
+            "S": [ 249, 250, 251, 252 ],
+            "Y": [ 104 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$16_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "1" ],
+            "Y": [ 249 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$17_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "0", "1" ],
+            "Y": [ 250 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$18_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "0" ],
+            "Y": [ 251 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$19_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "Y": [ 252 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$20": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000100",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "0", "1", "0", "0" ],
+            "S": [ 253, 254, 255, 256 ],
+            "Y": [ 175 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$21_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "1" ],
+            "Y": [ 253 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$22_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "0", "1" ],
+            "Y": [ 254 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$23_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "0" ],
+            "Y": [ 255 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$24_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "Y": [ 256 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$25": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000100",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "0", "1", "1", "0" ],
+            "S": [ 257, 258, 259, 260 ],
+            "Y": [ 261 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$26_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "1" ],
+            "Y": [ 257 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$27_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "0", "1" ],
+            "Y": [ 258 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$28_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "0" ],
+            "Y": [ 259 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$29_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "Y": [ 260 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$30": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000100",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "1", "0", "0", "0" ],
+            "S": [ 262, 263, 264, 265 ],
+            "Y": [ 105 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$31_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "1" ],
+            "Y": [ 262 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$32_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "0", "1" ],
+            "Y": [ 263 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$33_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "0" ],
+            "Y": [ 264 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$34_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:61.5-82.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "Y": [ 265 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$37": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:46.22-46.28|rtl/bridge_fsm.sv:46.18-47.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "0", "0" ],
+            "S": [ 176 ],
+            "Y": [ 266, 267 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$40": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:44.17-44.24|rtl/bridge_fsm.sv:44.13-47.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 266, 267 ],
+            "B": [ "x", "x" ],
+            "S": [ 177 ],
+            "Y": [ 268, 269 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$42": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 268, 269 ],
+            "S": [ 270 ],
+            "Y": [ 271, 272 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$43_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "0", "1" ],
+            "Y": [ 270 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$46": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:44.17-44.24|rtl/bridge_fsm.sv:44.13-47.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 271, 272 ],
+            "B": [ "1", "1" ],
+            "S": [ 177 ],
+            "Y": [ 273, 274 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$48": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 273, 274 ],
+            "S": [ 275 ],
+            "Y": [ 276, 277 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$49_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "0", "1" ],
+            "Y": [ 275 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$54": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:37.17-37.31|rtl/bridge_fsm.sv:37.13-38.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "0" ],
+            "S": [ 179 ],
+            "Y": [ 278, 279 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$56": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ 278, 279 ],
+            "S": [ 280 ],
+            "Y": [ 281, 282 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$57_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "Y": [ 280 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$58": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000100",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x" ],
+            "B": [ "0", "0", 276, 277, "0", "1", 281, 282 ],
+            "S": [ 283, 284, 285, 286 ],
+            "Y": [ 245, 246 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$59_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "1" ],
+            "Y": [ 283 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$60_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "0", "1" ],
+            "Y": [ 284 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$61_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "B": [ "1", "0" ],
+            "Y": [ 285 ]
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$62_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/bridge_fsm.sv:0.0-0.0|rtl/bridge_fsm.sv:35.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 247, 248 ],
+            "Y": [ 286 ]
+          }
+        },
+        "$flatten\\u_decoder.$procmux$63": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000100",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/address_decoder.sv:0.0-0.0|rtl/address_decoder.sv:12.5-17.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x" ],
+            "B": [ "0", "0", "0", "1", "0", "0", "1", "0", "0", "1", "0", "0", "1", "0", "0", "0" ],
+            "S": [ 287, 288, 289, 290 ],
+            "Y": [ 291, 292, 293, 294 ]
+          }
+        },
+        "$flatten\\u_decoder.$procmux$64_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/address_decoder.sv:0.0-0.0|rtl/address_decoder.sv:12.5-17.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 118, 119 ],
+            "B": [ "1", "1" ],
+            "Y": [ 287 ]
+          }
+        },
+        "$flatten\\u_decoder.$procmux$65_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/address_decoder.sv:0.0-0.0|rtl/address_decoder.sv:12.5-17.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 118, 119 ],
+            "B": [ "0", "1" ],
+            "Y": [ 288 ]
+          }
+        },
+        "$flatten\\u_decoder.$procmux$66_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/address_decoder.sv:0.0-0.0|rtl/address_decoder.sv:12.5-17.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 118, 119 ],
+            "B": [ "1", "0" ],
+            "Y": [ 289 ]
+          }
+        },
+        "$flatten\\u_decoder.$procmux$67_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "rtl/address_decoder.sv:0.0-0.0|rtl/address_decoder.sv:12.5-17.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 118, 119 ],
+            "Y": [ 290 ]
+          }
+        },
+        "$ternary$rtl/ahb_apb_bridge_top.sv:90$14": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:90.14-90.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0" ],
+            "B": [ 291, 292, 293, 294 ],
+            "S": [ 261 ],
+            "Y": [ 171, 172, 173, 174 ]
+          }
+        }
+      },
+      "netnames": {
+        "$flatten\\u_ahb_slave_if.$0\\addr_reg[31:0]": {
+          "hide_name": 1,
+          "bits": [ 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211 ],
+          "attributes": {
+            "src": "rtl/ahb_slave_if.sv:20.1-31.4"
+          }
+        },
+        "$flatten\\u_ahb_slave_if.$0\\wdata_reg[31:0]": {
+          "hide_name": 1,
+          "bits": [ 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243 ],
+          "attributes": {
+            "src": "rtl/ahb_slave_if.sv:20.1-31.4"
+          }
+        },
+        "$flatten\\u_ahb_slave_if.$0\\write_reg[0:0]": {
+          "hide_name": 1,
+          "bits": [ 244 ],
+          "attributes": {
+            "src": "rtl/ahb_slave_if.sv:20.1-31.4"
+          }
+        },
+        "$flatten\\u_ahb_slave_if.$logic_and$rtl/ahb_slave_if.sv:26$10_Y": {
+          "hide_name": 1,
+          "bits": [ 178 ],
+          "attributes": {
+            "src": "rtl/ahb_slave_if.sv:26.14-26.33"
+          }
+        },
+        "$flatten\\u_bridge_fsm.$2\\next_state[1:0]": {
+          "hide_name": 1,
+          "bits": [ 281, 282 ],
+          "attributes": {
+            "src": "rtl/bridge_fsm.sv:0.0-0.0"
+          }
+        },
+        "$flatten\\u_bridge_fsm.$3\\next_state[1:0]": {
+          "hide_name": 1,
+          "bits": [ 276, 277 ],
+          "attributes": {
+            "src": "rtl/bridge_fsm.sv:0.0-0.0"
+          }
+        },
+        "$flatten\\u_bridge_fsm.$4\\next_state[1:0]": {
+          "hide_name": 1,
+          "bits": [ 271, 272 ],
+          "attributes": {
+            "src": "rtl/bridge_fsm.sv:0.0-0.0"
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$16_CMP": {
+          "hide_name": 1,
+          "bits": [ 249 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$17_CMP": {
+          "hide_name": 1,
+          "bits": [ 250 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$18_CMP": {
+          "hide_name": 1,
+          "bits": [ 251 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$19_CMP": {
+          "hide_name": 1,
+          "bits": [ 252 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$21_CMP": {
+          "hide_name": 1,
+          "bits": [ 253 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$22_CMP": {
+          "hide_name": 1,
+          "bits": [ 254 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$23_CMP": {
+          "hide_name": 1,
+          "bits": [ 255 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$24_CMP": {
+          "hide_name": 1,
+          "bits": [ 256 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$26_CMP": {
+          "hide_name": 1,
+          "bits": [ 257 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$27_CMP": {
+          "hide_name": 1,
+          "bits": [ 258 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$28_CMP": {
+          "hide_name": 1,
+          "bits": [ 259 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$29_CMP": {
+          "hide_name": 1,
+          "bits": [ 260 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$31_CMP": {
+          "hide_name": 1,
+          "bits": [ 262 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$32_CMP": {
+          "hide_name": 1,
+          "bits": [ 263 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$33_CMP": {
+          "hide_name": 1,
+          "bits": [ 264 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$34_CMP": {
+          "hide_name": 1,
+          "bits": [ 265 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$37_Y": {
+          "hide_name": 1,
+          "bits": [ 266, 267 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$40_Y": {
+          "hide_name": 1,
+          "bits": [ 268, 269 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$43_CMP": {
+          "hide_name": 1,
+          "bits": [ 270 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$46_Y": {
+          "hide_name": 1,
+          "bits": [ 273, 274 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$49_CMP": {
+          "hide_name": 1,
+          "bits": [ 275 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$54_Y": {
+          "hide_name": 1,
+          "bits": [ 278, 279 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$57_CMP": {
+          "hide_name": 1,
+          "bits": [ 280 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$59_CMP": {
+          "hide_name": 1,
+          "bits": [ 283 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$60_CMP": {
+          "hide_name": 1,
+          "bits": [ 284 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$61_CMP": {
+          "hide_name": 1,
+          "bits": [ 285 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_bridge_fsm.$procmux$62_CMP": {
+          "hide_name": 1,
+          "bits": [ 286 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_decoder.$procmux$64_CMP": {
+          "hide_name": 1,
+          "bits": [ 287 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_decoder.$procmux$65_CMP": {
+          "hide_name": 1,
+          "bits": [ 288 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_decoder.$procmux$66_CMP": {
+          "hide_name": 1,
+          "bits": [ 289 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_decoder.$procmux$67_CMP": {
+          "hide_name": 1,
+          "bits": [ 290 ],
+          "attributes": {
+          }
+        },
+        "HADDR": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:10.38-10.43"
+          }
+        },
+        "HCLK": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:6.38-6.42"
+          }
+        },
+        "HRDATA": {
+          "hide_name": 0,
+          "bits": [ 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:16.38-16.44"
+          }
+        },
+        "HREADY": {
+          "hide_name": 0,
+          "bits": [ 71 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:14.38-14.44"
+          }
+        },
+        "HREADYOUT": {
+          "hide_name": 0,
+          "bits": [ 104 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:17.38-17.47"
+          }
+        },
+        "HRESETn": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:7.38-7.45"
+          }
+        },
+        "HRESP": {
+          "hide_name": 0,
+          "bits": [ 105 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:18.38-18.43"
+          }
+        },
+        "HTRANS": {
+          "hide_name": 0,
+          "bits": [ 69, 70 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:13.38-13.44"
+          }
+        },
+        "HWDATA": {
+          "hide_name": 0,
+          "bits": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:11.38-11.44"
+          }
+        },
+        "HWRITE": {
+          "hide_name": 0,
+          "bits": [ 68 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:12.38-12.44"
+          }
+        },
+        "PADDR": {
+          "hide_name": 0,
+          "bits": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:21.38-21.43"
+          }
+        },
+        "PENABLE": {
+          "hide_name": 0,
+          "bits": [ 175 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:25.38-25.45"
+          }
+        },
+        "PRDATA": {
+          "hide_name": 0,
+          "bits": [ 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:27.38-27.44"
+          }
+        },
+        "PREADY": {
+          "hide_name": 0,
+          "bits": [ 176 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:28.38-28.44"
+          }
+        },
+        "PSEL": {
+          "hide_name": 0,
+          "bits": [ 171, 172, 173, 174 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:24.38-24.42"
+          }
+        },
+        "PSLVERR": {
+          "hide_name": 0,
+          "bits": [ 177 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:29.38-29.45"
+          }
+        },
+        "PWDATA": {
+          "hide_name": 0,
+          "bits": [ 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:22.38-22.44"
+          }
+        },
+        "PWRITE": {
+          "hide_name": 0,
+          "bits": [ 170 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:23.38-23.44"
+          }
+        },
+        "fsm_psel": {
+          "hide_name": 0,
+          "bits": [ 261 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:38.24-38.32"
+          }
+        },
+        "psel_decoded": {
+          "hide_name": 0,
+          "bits": [ 291, 292, 293, 294 ],
+          "attributes": {
+            "src": "rtl/ahb_apb_bridge_top.sv:37.24-37.36"
+          }
+        },
+        "u_ahb_slave_if.valid_transfer": {
+          "hide_name": 0,
+          "bits": [ 179 ],
+          "attributes": {
+            "hdlname": "u_ahb_slave_if valid_transfer",
+            "src": "rtl/ahb_slave_if.sv:17.35-17.49"
+          }
+        },
+        "u_bridge_fsm.next_state": {
+          "hide_name": 0,
+          "bits": [ 245, 246 ],
+          "attributes": {
+            "enum_type": "$enum0",
+            "enum_value_00": "\\IDLE",
+            "enum_value_01": "\\SETUP",
+            "enum_value_10": "\\ACCESS",
+            "enum_value_11": "\\ERROR",
+            "hdlname": "u_bridge_fsm next_state",
+            "src": "rtl/bridge_fsm.sv:21.16-21.26",
+            "wiretype": "\\state_t"
+          }
+        },
+        "u_bridge_fsm.state": {
+          "hide_name": 0,
+          "bits": [ 247, 248 ],
+          "attributes": {
+            "enum_type": "$enum0",
+            "enum_value_00": "\\IDLE",
+            "enum_value_01": "\\SETUP",
+            "enum_value_10": "\\ACCESS",
+            "enum_value_11": "\\ERROR",
+            "hdlname": "u_bridge_fsm state",
+            "src": "rtl/bridge_fsm.sv:21.9-21.14",
+            "wiretype": "\\state_t"
+          }
+        }
+      }
+    }
+  }
+}

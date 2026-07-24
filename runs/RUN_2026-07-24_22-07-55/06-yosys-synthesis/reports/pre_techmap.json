@@ -1,0 +1,51 @@
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/azmuth/ASIC_PROJECTS/ahb-lite-apb4-bridge-ip/runs/RUN_2026-07-24_22-07-55/tmp/4ded95d280404bf397000e7a0641fb99.lib ",
+   "modules": {
+      "\\ahb_apb_bridge_top": {
+         "num_wires":         37,
+         "num_wire_bits":     229,
+         "num_pub_wires":     21,
+         "num_pub_wire_bits": 213,
+         "num_ports":         18,
+         "num_port_bits":     208,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         93,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 11,
+            "$_AND_": 2,
+            "$_DFFE_PN0P_": 67,
+            "$_MUX_": 1,
+            "$_NAND_": 1,
+            "$_NOR_": 3,
+            "$_ORNOT_": 3,
+            "$_OR_": 5
+         }
+      }
+   },
+      "design": {
+         "num_wires":         37,
+         "num_wire_bits":     229,
+         "num_pub_wires":     21,
+         "num_pub_wire_bits": 213,
+         "num_ports":         18,
+         "num_port_bits":     208,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         93,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 11,
+            "$_AND_": 2,
+            "$_DFFE_PN0P_": 67,
+            "$_MUX_": 1,
+            "$_NAND_": 1,
+            "$_NOR_": 3,
+            "$_ORNOT_": 3,
+            "$_OR_": 5
+         }
+      }
+}
+

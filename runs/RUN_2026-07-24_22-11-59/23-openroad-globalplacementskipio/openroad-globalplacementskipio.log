@@ -1,0 +1,99 @@
+Reading OpenROAD database at '/home/azmuth/ASIC_PROJECTS/ahb-lite-apb4-bridge-ip/runs/RUN_2026-07-24_22-11-59/20-openroad-generatepdn/ahb_apb_bridge_top.odb'…
+Reading library file at '/home/azmuth/.volare/volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading design constraints file at '/nix/store/h0ldzjka94yryiq8yxbxmwargpnmwhx6-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/base.sdc'…
+[INFO] Using clock HCLK…
+[INFO] Setting output delay to: 2
+[INFO] Setting input delay to: 2
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
++ global_placement -density 0.55 -skip_io -pad_right 0 -pad_left 0 -init_wirelength_coef 0.25
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  5.520 10.880 ) ( 794.420 788.800 ) um
+[INFO GPL-0006] NumInstances:              9534
+[INFO GPL-0007] NumPlaceInstances:          178
+[INFO GPL-0008] NumFixedInstances:         9356
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                    282
+[INFO GPL-0011] NumPins:                    642
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 800.000 800.000 ) um
+[INFO GPL-0013] CoreBBox: (  5.520 10.880 ) ( 794.420 788.800 ) um
+[INFO GPL-0016] CoreArea:            613701.088 um^2
+[INFO GPL-0017] NonPlaceInstsArea:    13137.600 um^2
+[INFO GPL-0018] PlaceInstsArea:        2775.162 um^2
+[INFO GPL-0019] Util:                     0.462 %
+[INFO GPL-0020] StdInstsArea:          2775.162 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:     21263
+[INFO GPL-0032] FillerInit:NumGNets:        282
+[INFO GPL-0033] FillerInit:NumGPins:        642
+[INFO GPL-0023] TargetDensity:            0.550
+[INFO GPL-0024] AvrgPlaceInstArea:       15.591 um^2
+[INFO GPL-0025] IdealBinArea:            28.347 um^2
+[INFO GPL-0026] IdealBinCnt:              21649
+[INFO GPL-0027] TotalBinArea:        613701.088 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  6.164  6.078 )
+[INFO GPL-0030] NumBins: 16384
+[NesterovSolve] Iter:    1 overflow: 0.971 HPWL: 462652
+[NesterovSolve] Iter:   10 overflow: 0.971 HPWL: 396770
+[NesterovSolve] Iter:   20 overflow: 0.971 HPWL: 394636
+[NesterovSolve] Iter:   30 overflow: 0.971 HPWL: 394264
+[NesterovSolve] Iter:   40 overflow: 0.970 HPWL: 394265
+[NesterovSolve] Iter:   50 overflow: 0.970 HPWL: 394341
+[NesterovSolve] Iter:   60 overflow: 0.970 HPWL: 394317
+[NesterovSolve] Iter:   70 overflow: 0.970 HPWL: 394378
+[NesterovSolve] Iter:   80 overflow: 0.970 HPWL: 394465
+[NesterovSolve] Iter:   90 overflow: 0.970 HPWL: 394864
+[NesterovSolve] Iter:  100 overflow: 0.970 HPWL: 395699
+[NesterovSolve] Iter:  110 overflow: 0.970 HPWL: 396999
+[NesterovSolve] Iter:  120 overflow: 0.970 HPWL: 399334
+[NesterovSolve] Iter:  130 overflow: 0.970 HPWL: 403200
+[NesterovSolve] Iter:  140 overflow: 0.970 HPWL: 409489
+[NesterovSolve] Iter:  150 overflow: 0.969 HPWL: 419489
+[NesterovSolve] Iter:  160 overflow: 0.968 HPWL: 433984
+[NesterovSolve] Iter:  170 overflow: 0.964 HPWL: 453868
+[NesterovSolve] Iter:  180 overflow: 0.953 HPWL: 477453
+[NesterovSolve] Iter:  190 overflow: 0.934 HPWL: 497252
+[NesterovSolve] Iter:  200 overflow: 0.905 HPWL: 503581
+[NesterovSolve] Iter:  210 overflow: 0.870 HPWL: 487711
+[NesterovSolve] Iter:  220 overflow: 0.856 HPWL: 478879
+[NesterovSolve] Iter:  230 overflow: 0.850 HPWL: 537701
+[NesterovSolve] Iter:  240 overflow: 0.852 HPWL: 535882
+[NesterovSolve] Iter:  250 overflow: 0.787 HPWL: 628906
+[NesterovSolve] Iter:  260 overflow: 0.708 HPWL: 662112
+[NesterovSolve] Iter:  270 overflow: 0.710 HPWL: 650669
+[NesterovSolve] Iter:  280 overflow: 0.584 HPWL: 661446
+[NesterovSolve] Iter:  290 overflow: 0.605 HPWL: 670228
+[NesterovSolve] Iter:  300 overflow: 0.496 HPWL: 709173
+[NesterovSolve] Iter:  310 overflow: 0.483 HPWL: 699370
+[NesterovSolve] Iter:  320 overflow: 0.423 HPWL: 737084
+[NesterovSolve] Iter:  330 overflow: 0.333 HPWL: 740957
+[NesterovSolve] Iter:  340 overflow: 0.333 HPWL: 764451
+[NesterovSolve] Iter:  350 overflow: 0.279 HPWL: 795783
+[NesterovSolve] Iter:  360 overflow: 0.260 HPWL: 813417
+[NesterovSolve] Iter:  370 overflow: 0.218 HPWL: 849605
+[NesterovSolve] Iter:  380 overflow: 0.191 HPWL: 874533
+[NesterovSolve] Iter:  390 overflow: 0.169 HPWL: 1150619
+[NesterovSolve] Iter:  400 overflow: 0.137 HPWL: 1283170
+[NesterovSolve] Iter:  410 overflow: 0.117 HPWL: 1390224
+[NesterovSolve] Finished with Overflow: 0.093228
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               572    2147.06
+  Tap cell                               8784   10990.54
+  Buffer                                   32     160.15
+  Inverter                                  2       7.51
+  Sequential cell                          67    1760.44
+  Multi-Input combinational cell           77     847.06
+  Total                                  9534   15912.76
+Writing OpenROAD database to '/home/azmuth/ASIC_PROJECTS/ahb-lite-apb4-bridge-ip/runs/RUN_2026-07-24_22-11-59/23-openroad-globalplacementskipio/ahb_apb_bridge_top.odb'…
+Writing netlist to '/home/azmuth/ASIC_PROJECTS/ahb-lite-apb4-bridge-ip/runs/RUN_2026-07-24_22-11-59/23-openroad-globalplacementskipio/ahb_apb_bridge_top.nl.v'…
+Writing powered netlist to '/home/azmuth/ASIC_PROJECTS/ahb-lite-apb4-bridge-ip/runs/RUN_2026-07-24_22-11-59/23-openroad-globalplacementskipio/ahb_apb_bridge_top.pnl.v'…
+Writing layout to '/home/azmuth/ASIC_PROJECTS/ahb-lite-apb4-bridge-ip/runs/RUN_2026-07-24_22-11-59/23-openroad-globalplacementskipio/ahb_apb_bridge_top.def'…
+Writing timing constraints to '/home/azmuth/ASIC_PROJECTS/ahb-lite-apb4-bridge-ip/runs/RUN_2026-07-24_22-11-59/23-openroad-globalplacementskipio/ahb_apb_bridge_top.sdc'…

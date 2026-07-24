@@ -1,0 +1,147 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+Startpoint: HRESETn (input port clocked by HCLK)
+Endpoint: _158_ (recovery check against rising-edge clock HCLK)
+Path Group: asynchronous
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock HCLK (rise edge)
+                                  0.000000    0.000000   clock network delay (propagated)
+                                  2.000000    2.000000 ^ input external delay
+     1    0.002958    0.020413    0.010873    2.010873 ^ HRESETn (in)
+                                                         HRESETn (net)
+                      0.020413    0.000000    2.010873 ^ input34/A (sky130_fd_sc_hd__buf_1)
+     1    0.011144    0.137652    0.137999    2.148872 ^ input34/X (sky130_fd_sc_hd__buf_1)
+                                                         net34 (net)
+                      0.137655    0.000501    2.149373 ^ fanout192/A (sky130_fd_sc_hd__buf_8)
+     6    0.134493    0.216747    0.225786    2.375159 ^ fanout192/X (sky130_fd_sc_hd__buf_8)
+                                                         net192 (net)
+                      0.227103    0.036393    2.411552 ^ fanout187/A (sky130_fd_sc_hd__buf_8)
+     6    0.151289    0.245383    0.274166    2.685718 ^ fanout187/X (sky130_fd_sc_hd__buf_8)
+                                                         net187 (net)
+                      0.253146    0.034440    2.720158 ^ fanout185/A (sky130_fd_sc_hd__buf_8)
+    11    0.136191    0.221388    0.258245    2.978402 ^ fanout185/X (sky130_fd_sc_hd__buf_8)
+                                                         net185 (net)
+                      0.237081    0.045748    3.024150 ^ fanout184/A (sky130_fd_sc_hd__clkbuf_4)
+    10    0.045997    0.146081    0.275915    3.300066 ^ fanout184/X (sky130_fd_sc_hd__clkbuf_4)
+                                                         net184 (net)
+                      0.146109    0.001998    3.302063 ^ _158_/RESET_B (sky130_fd_sc_hd__dfrtp_1)
+                                              3.302063   data arrival time
+
+                                 10.000000   10.000000   clock HCLK (rise edge)
+                                  0.000000   10.000000   clock source latency
+     1    0.059370    0.271235    0.194672   10.194672 ^ HCLK (in)
+                                                         HCLK (net)
+                      0.272238    0.000000   10.194672 ^ clkbuf_0_HCLK/A (sky130_fd_sc_hd__clkbuf_16)
+     5    0.133985    0.147811    0.278989   10.473661 ^ clkbuf_0_HCLK/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_0_HCLK (net)
+                      0.149720    0.013333   10.486995 ^ clkbuf_2_1_0_HCLK/A (sky130_fd_sc_hd__clkbuf_8)
+     2    0.036798    0.077541    0.188225   10.675220 ^ clkbuf_2_1_0_HCLK/X (sky130_fd_sc_hd__clkbuf_8)
+                                                         clknet_2_1_0_HCLK (net)
+                      0.077988    0.004252   10.679471 ^ clkbuf_3_3__f_HCLK/A (sky130_fd_sc_hd__clkbuf_16)
+    10    0.027154    0.048291    0.144194   10.823665 ^ clkbuf_3_3__f_HCLK/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_3_3__leaf_HCLK (net)
+                      0.048301    0.000603   10.824268 ^ _158_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                 -0.250000   10.574268   clock uncertainty
+                                  0.000000   10.574268   clock reconvergence pessimism
+                                  0.205181   10.779449   library recovery time
+                                             10.779449   data required time
+---------------------------------------------------------------------------------------------
+                                             10.779449   data required time
+                                             -3.302063   data arrival time
+---------------------------------------------------------------------------------------------
+                                              7.477386   slack (MET)
+
+
+Startpoint: PREADY (input port clocked by HCLK)
+Endpoint: HREADYOUT (output port clocked by HCLK)
+Path Group: HCLK
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock HCLK (rise edge)
+                                  0.000000    0.000000   clock network delay (propagated)
+                                  2.000000    2.000000 ^ input external delay
+     1    0.002976    0.020490    0.010934    2.010934 ^ PREADY (in)
+                                                         PREADY (net)
+                      0.020490    0.000000    2.010934 ^ input69/A (sky130_fd_sc_hd__clkbuf_1)
+     1    0.005294    0.071669    0.091946    2.102880 ^ input69/X (sky130_fd_sc_hd__clkbuf_1)
+                                                         net69 (net)
+                      0.071669    0.000163    2.103043 ^ _072_/A (sky130_fd_sc_hd__inv_2)
+     2    0.007766    0.028243    0.042801    2.145844 v _072_/Y (sky130_fd_sc_hd__inv_2)
+                                                         _067_ (net)
+                      0.028245    0.000295    2.146140 v _081_/A1 (sky130_fd_sc_hd__o21ai_1)
+     1    0.001960    0.085070    0.105977    2.252117 ^ _081_/Y (sky130_fd_sc_hd__o21ai_1)
+                                                         net103 (net)
+                      0.085070    0.000038    2.252154 ^ output103/A (sky130_fd_sc_hd__buf_2)
+     1    0.035658    0.176877    0.217424    2.469578 ^ output103/X (sky130_fd_sc_hd__buf_2)
+                                                         HREADYOUT (net)
+                      0.176878    0.000727    2.470305 ^ HREADYOUT (out)
+                                              2.470305   data arrival time
+
+                                 10.000000   10.000000   clock HCLK (rise edge)
+                                  0.000000   10.000000   clock network delay (propagated)
+                                 -0.250000    9.750000   clock uncertainty
+                                  0.000000    9.750000   clock reconvergence pessimism
+                                 -2.000000    7.750000   output external delay
+                                              7.750000   data required time
+---------------------------------------------------------------------------------------------
+                                              7.750000   data required time
+                                             -2.470305   data arrival time
+---------------------------------------------------------------------------------------------
+                                              5.279695   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+fanout190/X                              10     13     -3 (VIOLATED)
+fanout176/X                              10     12     -2 (VIOLATED)
+clkbuf_3_4__f_HCLK/X                     10     11        (VIOLATED)
+clkbuf_3_5__f_HCLK/X                     10     11        (VIOLATED)
+fanout185/X                              10     11        (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 4 unannotated drivers.
+ HTRANS[0]
+ clkload0/X
+ clkload1/X
+ clkload2/Y
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 5
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================

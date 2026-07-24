@@ -1,0 +1,17 @@
+{
+    "DESIGN_NAME": "ahb_apb_bridge_top",
+    "VERILOG_FILES": [
+        "rtl/address_decoder.sv",
+        "rtl/ahb_slave_if.sv",
+        "rtl/apb_master_if.sv",
+        "rtl/bridge_fsm.sv",
+        "rtl/ahb_apb_bridge_top.sv"
+    ],
+    "CLOCK_PORT": "HCLK",
+    "CLOCK_PERIOD": 10,
+    "FP_CORE_UTIL": 40,
+    "PL_TARGET_DENSITY": 0.55,
+
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 800 800"
+}

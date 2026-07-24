@@ -1,107 +1,85 @@
-//==============================================================================
-// Project : AHB-Lite to APB4 Bridge IP Core
-// Module  : bridge_fsm
-// Description :
-// FSM controlling AHB-Lite to APB4 protocol conversion.
-//==============================================================================
-
 module bridge_fsm (
+    input  logic HCLK,
+    input  logic HRESETn,
+    input  logic valid_transfer,
+    input  logic PREADY,
+    input  logic PSLVERR,
 
-    input  logic clk,
-    input  logic rst_n,
-
-    input  logic ahb_valid,
-    input  logic pready,
-    input  logic pslverr,
-
-    output logic psel,
-    output logic penable,
-    output logic hreadyout,
-    output logic hresp
-
+    output logic PSEL,
+    output logic PENABLE,
+    output logic HREADYOUT,
+    output logic HRESP
 );
 
 typedef enum logic [1:0] {
-    IDLE,
-    SETUP,
-    ACCESS
+    IDLE   = 2'b00,
+    SETUP  = 2'b01,
+    ACCESS = 2'b10,
+    ERROR  = 2'b11
 } state_t;
 
 state_t state, next_state;
 
-//------------------------------------------------------------
-// State Register
-//------------------------------------------------------------
-always_ff @(posedge clk or negedge rst_n) begin
-    if (!rst_n)
+// State register
+always_ff @(posedge HCLK or negedge HRESETn) begin
+    if (!HRESETn)
         state <= IDLE;
     else
         state <= next_state;
 end
 
-//------------------------------------------------------------
-// Next-State Logic
-//------------------------------------------------------------
+// Next-state logic
 always_comb begin
-
     next_state = state;
 
     case (state)
-
         IDLE:
-            if (ahb_valid)
+            if (valid_transfer)
                 next_state = SETUP;
 
         SETUP:
             next_state = ACCESS;
 
         ACCESS:
-            if (pready)
+            if (PSLVERR)
+                next_state = ERROR;
+            else if (PREADY)
                 next_state = IDLE;
-            else
-                next_state = ACCESS;
 
-        default:
+        ERROR:
             next_state = IDLE;
-
     endcase
-
 end
 
-//------------------------------------------------------------
-// Output Logic
-//------------------------------------------------------------
+// Output logic
 always_comb begin
-
-    psel      = 1'b0;
-    penable   = 1'b0;
-    hreadyout = 1'b1;
-    hresp     = 1'b0;
+    PSEL      = 1'b0;
+    PENABLE   = 1'b0;
+    HREADYOUT = 1'b1;
+    HRESP     = 1'b0;
 
     case (state)
-
         IDLE: begin
-            psel      = 1'b0;
-            penable   = 1'b0;
-            hreadyout = 1'b1;
+            HREADYOUT = 1'b1;
         end
 
         SETUP: begin
-            psel      = 1'b1;
-            penable   = 1'b0;
-            hreadyout = 1'b0;
+            PSEL      = 1'b1;
+            PENABLE   = 1'b0;
+            HREADYOUT = 1'b0;
         end
 
         ACCESS: begin
-            psel      = 1'b1;
-            penable   = 1'b1;
-            hreadyout = pready;
-            hresp     = pslverr;
+            PSEL      = 1'b1;
+            PENABLE   = 1'b1;
+            HREADYOUT = PREADY;
         end
 
+        ERROR: begin
+            HRESP     = 1'b1;
+            HREADYOUT = 1'b1;
+        end
     endcase
-
 end
 
 endmodule
-

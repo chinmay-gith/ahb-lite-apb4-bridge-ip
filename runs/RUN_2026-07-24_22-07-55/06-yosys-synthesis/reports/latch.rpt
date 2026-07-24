@@ -1,0 +1,14 @@
+
+19. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\bridge_fsm.\HREADYOUT' from process `\bridge_fsm.$proc$rtl/bridge_fsm.sv:0$7'.
+No latch inferred for signal `\bridge_fsm.\HRESP' from process `\bridge_fsm.$proc$rtl/bridge_fsm.sv:0$7'.
+No latch inferred for signal `\bridge_fsm.\PSEL' from process `\bridge_fsm.$proc$rtl/bridge_fsm.sv:0$7'.
+No latch inferred for signal `\bridge_fsm.\PENABLE' from process `\bridge_fsm.$proc$rtl/bridge_fsm.sv:0$7'.
+No latch inferred for signal `\bridge_fsm.\next_state' from process `\bridge_fsm.$proc$rtl/bridge_fsm.sv:0$6'.
+No latch inferred for signal `$paramod$9aa7f8c73f38399d81c9421d1787a3c571c65c83\address_decoder.\PSEL' from process `$paramod$9aa7f8c73f38399d81c9421d1787a3c571c65c83\address_decoder.$proc$rtl/address_decoder.sv:0$3'.
+No latch inferred for signal `$paramod$6b0e2511c0373e2c7a13b2598d59ab4586bb8acb\apb_master_if.\PADDR' from process `$paramod$6b0e2511c0373e2c7a13b2598d59ab4586bb8acb\apb_master_if.$proc$rtl/apb_master_if.sv:0$2'.
+No latch inferred for signal `$paramod$6b0e2511c0373e2c7a13b2598d59ab4586bb8acb\apb_master_if.\PWDATA' from process `$paramod$6b0e2511c0373e2c7a13b2598d59ab4586bb8acb\apb_master_if.$proc$rtl/apb_master_if.sv:0$2'.
+No latch inferred for signal `$paramod$6b0e2511c0373e2c7a13b2598d59ab4586bb8acb\apb_master_if.\PWRITE' from process `$paramod$6b0e2511c0373e2c7a13b2598d59ab4586bb8acb\apb_master_if.$proc$rtl/apb_master_if.sv:0$2'.
+No latch inferred for signal `$paramod$6b0e2511c0373e2c7a13b2598d59ab4586bb8acb\apb_master_if.\PSEL' from process `$paramod$6b0e2511c0373e2c7a13b2598d59ab4586bb8acb\apb_master_if.$proc$rtl/apb_master_if.sv:0$2'.
+No latch inferred for signal `$paramod$6b0e2511c0373e2c7a13b2598d59ab4586bb8acb\apb_master_if.\PENABLE' from process `$paramod$6b0e2511c0373e2c7a13b2598d59ab4586bb8acb\apb_master_if.$proc$rtl/apb_master_if.sv:0$2'.
+No latch inferred for signal `$paramod$73a3980ba8a68177b0617f0f620fd34f6ef3e417\ahb_slave_if.\valid_transfer' from process `$paramod$73a3980ba8a68177b0617f0f620fd34f6ef3e417\ahb_slave_if.$proc$rtl/ahb_slave_if.sv:0$11'.

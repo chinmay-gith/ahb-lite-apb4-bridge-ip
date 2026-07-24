@@ -1,0 +1,343 @@
+$date
+	Fri Jul 24 18:44:29 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module bridge_tb $end
+$var wire 1 ! PWRITE $end
+$var wire 32 " PWDATA [31:0] $end
+$var wire 4 # PSEL [3:0] $end
+$var wire 1 $ PENABLE $end
+$var wire 32 % PADDR [31:0] $end
+$var wire 1 & HRESP $end
+$var wire 1 ' HREADYOUT $end
+$var wire 32 ( HRDATA [31:0] $end
+$var parameter 32 ) ADDR_WIDTH $end
+$var parameter 32 * DATA_WIDTH $end
+$var parameter 32 + NUM_SLAVES $end
+$var reg 32 , HADDR [31:0] $end
+$var reg 1 - HCLK $end
+$var reg 1 . HREADY $end
+$var reg 1 / HRESETn $end
+$var reg 2 0 HTRANS [1:0] $end
+$var reg 32 1 HWDATA [31:0] $end
+$var reg 1 2 HWRITE $end
+$var reg 32 3 PRDATA [31:0] $end
+$var reg 1 4 PREADY $end
+$var reg 1 5 PSLVERR $end
+$scope module dut $end
+$var wire 32 6 HADDR [31:0] $end
+$var wire 1 - HCLK $end
+$var wire 32 7 HRDATA [31:0] $end
+$var wire 1 . HREADY $end
+$var wire 1 / HRESETn $end
+$var wire 2 8 HTRANS [1:0] $end
+$var wire 32 9 HWDATA [31:0] $end
+$var wire 1 2 HWRITE $end
+$var wire 32 : PRDATA [31:0] $end
+$var wire 1 4 PREADY $end
+$var wire 1 5 PSLVERR $end
+$var wire 1 ; write_reg $end
+$var wire 32 < wdata_reg [31:0] $end
+$var wire 1 = valid_transfer $end
+$var wire 4 > psel_decoded [3:0] $end
+$var wire 1 ? fsm_psel $end
+$var wire 1 @ fsm_penable $end
+$var wire 32 A addr_reg [31:0] $end
+$var wire 1 ! PWRITE $end
+$var wire 32 B PWDATA [31:0] $end
+$var wire 4 C PSEL [3:0] $end
+$var wire 1 $ PENABLE $end
+$var wire 32 D PADDR [31:0] $end
+$var wire 1 & HRESP $end
+$var wire 1 ' HREADYOUT $end
+$var parameter 32 E ADDR_WIDTH $end
+$var parameter 32 F DATA_WIDTH $end
+$var parameter 32 G NUM_SLAVES $end
+$scope module u_ahb_slave_if $end
+$var wire 32 H HADDR [31:0] $end
+$var wire 1 - HCLK $end
+$var wire 1 . HREADY $end
+$var wire 1 / HRESETn $end
+$var wire 2 I HTRANS [1:0] $end
+$var wire 32 J HWDATA [31:0] $end
+$var wire 1 2 HWRITE $end
+$var parameter 32 K ADDR_WIDTH $end
+$var parameter 32 L DATA_WIDTH $end
+$var reg 32 M addr_reg [31:0] $end
+$var reg 1 = valid_transfer $end
+$var reg 32 N wdata_reg [31:0] $end
+$var reg 1 ; write_reg $end
+$upscope $end
+$scope module u_apb_master $end
+$var wire 4 O PSEL_in [3:0] $end
+$var wire 32 P addr_reg [31:0] $end
+$var wire 32 Q wdata_reg [31:0] $end
+$var wire 1 ; write_reg $end
+$var wire 1 @ PENABLE_in $end
+$var parameter 32 R ADDR_WIDTH $end
+$var parameter 32 S DATA_WIDTH $end
+$var parameter 32 T NUM_SLAVES $end
+$var reg 32 U PADDR [31:0] $end
+$var reg 1 $ PENABLE $end
+$var reg 4 V PSEL [3:0] $end
+$var reg 32 W PWDATA [31:0] $end
+$var reg 1 ! PWRITE $end
+$upscope $end
+$scope module u_bridge_fsm $end
+$var wire 1 - HCLK $end
+$var wire 1 / HRESETn $end
+$var wire 1 4 PREADY $end
+$var wire 1 5 PSLVERR $end
+$var wire 1 = valid_transfer $end
+$var reg 1 ' HREADYOUT $end
+$var reg 1 & HRESP $end
+$var reg 1 @ PENABLE $end
+$var reg 1 ? PSEL $end
+$var reg 2 X next_state [1:0] $end
+$var reg 2 Y state [1:0] $end
+$upscope $end
+$scope module u_decoder $end
+$var wire 32 Z addr_reg [31:0] $end
+$var parameter 32 [ ADDR_WIDTH $end
+$var parameter 32 \ NUM_SLAVES $end
+$var reg 4 ] PSEL [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 \
+b100000 [
+b100 T
+b100000 S
+b100000 R
+b100000 L
+b100000 K
+b100 G
+b100000 F
+b100000 E
+b100 +
+b100000 *
+b100000 )
+$end
+#0
+$dumpvars
+b1 ]
+b0 Z
+b0 Y
+b0 X
+b0 W
+b0 V
+b0 U
+b0 Q
+b0 P
+b0 O
+b0 N
+b0 M
+b0 J
+b0 I
+b0 H
+b0 D
+b0 C
+b0 B
+b0 A
+0@
+0?
+b1 >
+0=
+b0 <
+0;
+b10010001101000101011001111000 :
+b0 9
+b0 8
+b10010001101000101011001111000 7
+b0 6
+05
+14
+b10010001101000101011001111000 3
+02
+b0 1
+b0 0
+0/
+1.
+0-
+b0 ,
+b10010001101000101011001111000 (
+1'
+0&
+b0 %
+0$
+b0 #
+b0 "
+0!
+$end
+#5000
+1-
+#10000
+0-
+#15000
+1-
+#20000
+0-
+1/
+#25000
+b1 X
+1=
+b10 0
+b10 8
+b10 I
+12
+b11011110101011011011111011101111 1
+b11011110101011011011111011101111 9
+b11011110101011011011111011101111 J
+b1000000000000 ,
+b1000000000000 6
+b1000000000000 H
+1-
+#30000
+0-
+#35000
+b10 #
+b10 C
+b10 V
+b10 O
+1!
+b11011110101011011011111011101111 "
+b11011110101011011011111011101111 B
+b11011110101011011011111011101111 W
+b1000000000000 %
+b1000000000000 D
+b1000000000000 U
+b10 >
+b10 ]
+0'
+1?
+b10 X
+0=
+1;
+b11011110101011011011111011101111 <
+b11011110101011011011111011101111 N
+b11011110101011011011111011101111 Q
+b1000000000000 A
+b1000000000000 M
+b1000000000000 P
+b1000000000000 Z
+b1 Y
+b0 0
+b0 8
+b0 I
+1-
+#40000
+0-
+#45000
+1$
+1@
+1'
+1?
+b0 X
+b10 Y
+1-
+#50000
+0-
+#55000
+0$
+b0 #
+b0 C
+b0 V
+b0 O
+0@
+0?
+b0 Y
+1-
+#60000
+0-
+#65000
+1-
+#70000
+0-
+#75000
+1-
+#80000
+0-
+#85000
+1-
+#90000
+0-
+#95000
+b1 X
+1=
+b10 0
+b10 8
+b10 I
+02
+b1000000000100 ,
+b1000000000100 6
+b1000000000100 H
+1-
+#100000
+0-
+#105000
+b10 #
+b10 C
+b10 V
+b10 O
+0'
+1?
+b10 X
+0!
+b1000000000100 %
+b1000000000100 D
+b1000000000100 U
+b10 >
+b10 ]
+0=
+b1 Y
+0;
+b1000000000100 A
+b1000000000100 M
+b1000000000100 P
+b1000000000100 Z
+b0 0
+b0 8
+b0 I
+1-
+#110000
+0-
+#115000
+1$
+1@
+1'
+1?
+b0 X
+b10 Y
+1-
+#120000
+0-
+#125000
+0$
+b0 #
+b0 C
+b0 V
+b0 O
+0@
+0?
+b0 Y
+1-
+#130000
+0-
+#135000
+1-
+#140000
+0-
+#145000
+1-
+#150000
+0-
+#155000
+1-
