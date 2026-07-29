@@ -94,6 +94,6 @@ The bridge converts high-speed AHB-Lite transactions into APB4 peripheral transa
 
 **Chinmay Devaramani**
 
-Electronics and Communication Engineering
+Electronics & Communication Engineering
 
 GitHub: https://github.com/chinmay-gith
